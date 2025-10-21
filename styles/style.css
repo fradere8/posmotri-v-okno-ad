@@ -8,7 +8,18 @@ html {
   block-size: 100%;
 }
 
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .page {
+  display: flex;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -16,6 +27,26 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    max-width: 1140px;
+    justify-self: center;
+    align-self: center;
+    gap: 30px;
+}
+
+.result {
+  width: 712px;
+  margin-top: 85px;
+}
+
+.result__video {
+  width: 711px;
+  height: 381px;
+  object-fit:cover;
 }
 
 h1,
@@ -30,6 +61,15 @@ blockquote,
 fieldset {
   margin: 0;
   padding: 0;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: 32.4% 30.6% 27%;
+  grid-gap:35px;
+  align-self: flex-start;
+  margin-top:13px;
+  
 }
 
 ul,
