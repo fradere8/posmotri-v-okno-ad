@@ -32,15 +32,15 @@ html {
 }
 
 .result {
-  grid-area: "result";
-  align-self: end; !!!!!!!!!!!
+  grid-area: result;
+  align-self: end;
 }
 
 .result__video-container {
   position: relative;
   width: 711px;
-  height: 381px;
-  margin-bottom: 18px;
+  height: 386px;
+  margin-bottom: 16px;
 }
 
 .result__video {
@@ -74,13 +74,12 @@ ol {
   grid-template-columns: 711px 399px;
   grid-template-rows: auto;
   align-content: center;
-  align-items: center;
+  align-items: start;
   margin: 0 auto;
   grid-template-areas: "result content__details";
   column-gap: 30px;
   max-width: 1140px;
   padding-top: 3px;
-  
 }
 
 .title {
@@ -100,7 +99,7 @@ ol {
   height: 100%;
   align-items: flex-start;
   gap: 26px;
-  margin-top: 100px;
+  margin-top: 5px;
 }
 
 .content__list-container {
@@ -197,6 +196,16 @@ ol {
   padding-bottom: 5px;
 }
 
+.search-form__pseudo-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inline-size: 19px;
+  block-size: 19px;
+  border: 1px solid white;
+  margin-right: 5px; 
+}
+
 .search-form__pseudo-checkbox:hover {
   cursor: pointer;
 }
@@ -227,7 +236,7 @@ ol {
   border: 1px solid #fff;
   height: 34px;
   cursor: pointer;
-  margin-bottom: 33px;
+  margin-bottom: 2px;
 }
 
 .button:active {
@@ -280,6 +289,9 @@ ol {
 
 .content__video-card {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 .content__video-card-description-container {
@@ -289,36 +301,42 @@ ol {
   font-family: "Fira Sans Condensed", sans-serif;
   margin-block-end: 5px;
   line-height: 16.2px;
-  line-clamp: 3;
   text-align: left;
   text-decoration-skip-ink: none;
-  -webkit-line-clamp: 3;
-  text-overflow: ellipsis;
+  flex-grow: 1;
+  max-width: 200px;
+  min-width: 0;
 }
 
 .content__video-card-title {
   font-size: 30px;
   font-family: 'Oswald', sans-serif;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
   text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1;
+  margin-bottom: 6px;
+  max-width: 100%;
+  max-inline-size: 196px;
 }
 
 .content__video-card-description {
-  display: block;
-  -webkit-box-orient: vertical;
   font-size: 18px;
   font-weight: 400;
-  overflow: hidden;
   line-height: 17px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .content__video-card-thumbnail {
-  min-width: 194px;
-  max-height: 103px;
+  width: 194px;
+  height: 103px;
   object-fit: cover;
   object-position: center;
+  flex-shrink: 0;
 }
 
 .more-button {
