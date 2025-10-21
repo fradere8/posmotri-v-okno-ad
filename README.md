@@ -1,1 +1,1 @@
-Проектная работа по курсу.
+https://github.com/fradere8/posmotri-v-okno-ad
